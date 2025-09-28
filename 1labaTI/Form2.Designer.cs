@@ -40,6 +40,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.calculate_btn = new System.Windows.Forms.Button();
+            this.txtResults = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.variant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stroki)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stolbs)).BeginInit();
@@ -146,6 +147,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 334);
             this.dataGridView1.Name = "dataGridView1";
@@ -154,6 +156,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(15, 191);
             this.dataGridView2.Name = "dataGridView2";
@@ -170,11 +173,21 @@
             this.calculate_btn.UseVisualStyleBackColor = true;
             this.calculate_btn.Click += new System.EventHandler(this.calculate_btn_Click);
             // 
+            // txtResults
+            // 
+            this.txtResults.Location = new System.Drawing.Point(57, -1);
+            this.txtResults.Name = "txtResults";
+            this.txtResults.Size = new System.Drawing.Size(342, 489);
+            this.txtResults.TabIndex = 12;
+            this.txtResults.Text = "";
+            this.txtResults.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 515);
+            this.ClientSize = new System.Drawing.Size(394, 515);
+            this.Controls.Add(this.txtResults);
             this.Controls.Add(this.calculate_btn);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button calculate_btn;
+        private System.Windows.Forms.RichTextBox txtResults;
     }
 }
