@@ -19,21 +19,29 @@ namespace _1labaTI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (A_P_btn.Checked == true)
+            try
             {
-                Form2 newForm = new Form2();
-                newForm.Show();
+                if (A_P_btn.Checked)
+                {
+                    Form2 newForm = new Form2();
+                    newForm.Show();
+                }
+                else if (B_P_btn.Checked)
+                {
+                    Form3 newForm = new Form3();
+                    newForm.Show();
+                }
+                else if (P_btn.Checked)
+                {
+                    Form4 newForm = new Form4();
+                    newForm.Show();
+                }
             }
-            if (B_P_btn.Checked == true)
+            catch (Exception)
             {
-                Form3 newForm = new Form3();
-                newForm.Show();
+                MessageBox.Show("Выберите случай!");
             }
-            if (P_btn.Checked == true)
-            {
-                Form4 newForm = new Form4();
-                newForm.Show();
-            }
+
         }
 
         private void A_P_btn_CheckedChanged(object sender, EventArgs e)
